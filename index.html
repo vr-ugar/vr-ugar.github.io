@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>For Katya • A-Frame</title>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js">></script>
+    <script src="handle-events.js"></script>
+
+  </head>
+  
+  <body>
+    <a-scene background="color: black" loadingscreen="backgroundColor: black; dotsColor :orange">
+
+	    <a-camera><a-cursor color="red" visible="false"></a-cursor></a-camera>
+      <a-assets>
+        <a-asset-item id="wood_obj" src="assets/wood_old/wood.obj"></a-asset-item>
+        <a-asset-item id="wood_mtl" src="assets/wood_old/wood.mtl"></a-asset-item>
+        <a-asset-item id="spider_obj" src="assets/spider/spider.obj"></a-asset-item>
+        <a-asset-item id="spider_mtl" src="assets/spider/spider.mtl"></a-asset-item>
+     
+	<audio id="spider_sound" src="assets/spider/spider.mp3" preload="true"></audio>
+      </a-assets>
+      <a-sky color="black"></a-sky>
+
+      <a-obj-model id="wood" src="#wood_obj" mtl="#wood_mtl" rotation="-137.53 1.47 4.13" position="-2.70101 25.8838 -48.17656" scale="5 5 5" visible="true" original_scale="5 5 5">      
+	      <a-sphere toid="spider" color="red" position="0.31082 -4.4339 -8.54532" handle-events="" material="" geometry=""> </a-sphere>
+
+      </a-obj-model>
+
+      <a-obj-model id="spider" src="#spider_obj" mtl="#spider_mtl" rotation="-10 -2.6 -90" position="5.48339 26.64887 87.2042" scale="10 10 10" visible="false" material="" obj-model="" original_scale="10 10 10" sound="src: #spider_sound; autoplay: true; loop: true; volume=20"> 
+	      <a-sphere color="blue" position="-1.82497 -3.53756 -10.33595" sound="src: assets/spider/spider.mp3; autoplay: true; loop: true; volume: 10" material="" geometry="" scale="0.5 0.5 0.5"> 
+		      		       
+		      		            </a-sphere>
+		       
+		            </a-sphere>
+      </a-obj-model>
+    </a-scene>
+  </body>
+</html>
